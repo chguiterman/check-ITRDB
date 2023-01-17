@@ -40,7 +40,7 @@ meas_files <- file_index %>%
 
 
 meas_file_check <- meas_files %>%
-  filter(region == "africa") %>%
+  # filter(region == "africa") %>%
   mutate(result = map2_chr(region, file_name,
                       ~ {
                         if (.x %in% c("canada", "mexico", "usa")) {
@@ -55,4 +55,4 @@ meas_file_check <- meas_files %>%
                       })
   )
 
-write.csv(meas_file_check, "data/ITRDB_RWL_files.csv")
+write.csv(meas_file_check, "data/ITRDB_RWL_files.csv", row.names = FALSE)
