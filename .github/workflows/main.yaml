@@ -46,7 +46,7 @@ jobs:
 
       shell: Rscript {0}
     
-    - name: Scrape
+    - name: Check files
       run: |
         source("check_ITRDB.R")
       shell: Rscript {0}
