@@ -1,5 +1,5 @@
 # Weekly runs
-name: check-ITRDB-WAF
+name: check-ITRDB
 
 # Controls when the action will run.
 on:
