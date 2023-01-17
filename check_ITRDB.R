@@ -40,7 +40,7 @@ meas_files <- file_index %>%
 
 
 meas_file_check <- meas_files %>%
-  # filter(region == "africa") %>%
+  filter(region == "africa") %>%
   mutate(result = map2_chr(region, file_name,
                       ~ {
                         if (.x %in% c("canada", "mexico", "usa")) {
