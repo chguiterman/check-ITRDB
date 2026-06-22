@@ -49,7 +49,8 @@ meas_file_check <- meas_files %>%
                         class(
                           try(
                             read.rwl(str_glue("{url}{.x}/{.y}"),
-                                     format = "tucson")
+                                     format = "tucson",
+                                     long = TRUE)
                             )
                           )[[1]]
                       })
